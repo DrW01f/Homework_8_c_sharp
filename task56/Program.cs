@@ -73,7 +73,7 @@ void Main()
     int[,] array = GetArray(rowAndColumn);
     PrintArray(array);
     int result = FindMinSum(array);
-    Console.WriteLine($"Строка номер {result} имеет минимальную сумму ");
+    Console.WriteLine($"Строка номер {result} имеет минимальную сумму элементов");
 
 }
 
