@@ -19,19 +19,39 @@ int[] InputParametrs()
     return parametrs;
 }
 
-int[,,] GetArray(int[] array, int minValue = 1, int maxValue = 20)
+int[,,] GetArray(int[] array, int minValue = 10, int maxValue = 99)
 {
-    int[,,] result = new int[array[0], array[1], array[2]];    
+    int[,,] result = new int[array[0], array[1], array[2]];
+    int[] dictionary = {};
+    // int temp = 0;
+    // int condition = 0;
+    // int end = 0;
+    int m = minValue;
     for(int k = 0; k < array[0]; k++)
     {
         for (int i = 0; i < array[1]; i++)
         {
             for (int j = 0; j < array[2]; j++)
             {
-                result[k, i, j] = new Random().Next(minValue, maxValue + 1);
+                result[k, i, j] += minValue;
+                minValue++;
+                
+                // while (true)
+                // {
+                //     temp = new Random().Next(minValue, maxValue + 1);
+                //     condition = Array.IndexOf(dictionary, temp);
+                //     if (condition == -1)                    
+                //     {
+                //         result[k, i, j] = temp;
+                //         dictionary.Append(temp);                        
+                //         j++;
+                //         end++;                      
+                //         break;
+                //     }
+                // }                             
             }
         }
-    }
+    }    
     return result;
 }
 
@@ -60,3 +80,5 @@ void Main()
 }
 
 Main();
+
+
